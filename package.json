@@ -7,10 +7,12 @@
     "@types/node": "12.0.0",
     "@types/react": "16.8.17",
     "@types/react-dom": "16.8.4",
+    "@types/react-router-dom": "^4.3.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
     "react-scripts": "3.0.0",
-    "typescript": "3.4.5"
+    "typescript": "^3.4.5"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -36,6 +38,6 @@
   "author": "Smart Developer",
   "repository": {
     "type": "git",
-    "url": "https://github.com/SmartDeveloper0124/React-Redux-Saga.git"     
+    "url": "https://github.com/SmartDeveloper0124/React-Redux-Saga.git"
   }
 }
