@@ -4,11 +4,9 @@ import logo from './logo.svg';
 import './App.css';
 import {BrowserRouter as Router, Route, Link, NavLink, Switch} from 'react-router-dom'
 
-// import Header from 'pages/header'
+import {Header} from './components'
 
-// import Home from 'pages/home'
-// import Signup from 'pages/Signup'
-// import Login from 'pages/Login'
+import {Login, Signup, Home} from './pages'
 
 export interface Props {
 
@@ -37,31 +35,6 @@ class App extends React.Component<Props, object>{
     )
   }
 }
-
-const Header = () => {
-
-  return (
-    <nav>
-      <ul>
-        <li>
-          <NavLink to="/">Home</NavLink>
-        </li>
-        <li>
-          <NavLink to="/login">Login</NavLink>
-        </li>
-        <li>
-          <NavLink to="/signup">Signup</NavLink>
-        </li>
-      </ul>
-    </nav>
-  )
-}
-
-const Home = () => <div>Home</div>
-
-const Login = () => <div>Login</div>
-
-const Signup = () => <div>Signup</div>
 
 
 
