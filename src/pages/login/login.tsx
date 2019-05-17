@@ -111,7 +111,7 @@ export class LoginForm extends React.Component<Props, State> {
 		            color="primary"
 		            className={classes.submit}
 		          >
-		            Sign in
+		            Log in
 		          </Button>
 		        </form>
 		      </Paper>
