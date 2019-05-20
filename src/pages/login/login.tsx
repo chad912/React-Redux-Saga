@@ -81,7 +81,6 @@ export class LoginForm extends React.Component<Props, State> {
  	const { classes } = this.props;
  	console.log(classes);
 	  return (
-	  	<MuiThemeProvider theme={theme}>
 		    <main className={classes.main}>
 		      <CssBaseline />
 		      <Paper className={classes.paper}>
@@ -111,12 +110,11 @@ export class LoginForm extends React.Component<Props, State> {
 		            color="primary"
 		            className={classes.submit}
 		          >
-		            Log in
+		            Sign in
 		          </Button>
 		        </form>
 		      </Paper>
 		    </main>
-		</MuiThemeProvider>
 	  );
 	}
 }
