@@ -12,9 +12,12 @@ import InputLabel from '@material-ui/core/InputLabel';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
+
 import {WithStyles, createStyles, withStyles, MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles'
 
-import {Theme} from '@material-ui/core/styles/createMuiTheme'
+
+import {Theme} from '@material-ui/core/styles/createMuiTheme';
+import Grid from '@material-ui/core/Grid';
 
 
 const styles = (theme:Theme) => createStyles({
@@ -29,7 +32,7 @@ const styles = (theme:Theme) => createStyles({
 	    marginLeft: theme.spacing.unit * 3,
 	    marginRight: theme.spacing.unit * 3,
 	    [theme.breakpoints.up(400 + theme.spacing.unit * 3 * 2)]: {
-	      width: 400,
+	      width: 600,
 	      marginLeft: 'auto',
 	      marginRight: 'auto',
 	    },
@@ -87,23 +90,44 @@ export class SignupForm extends React.Component<Props, State> {
 		          Sign up
 		        </Typography>
 		        <form className={classes.form}>
-		          <FormControl margin="normal" required fullWidth>
-		            <InputLabel htmlFor="email">Email Address</InputLabel>
-		            <Input id="email" name="email" autoComplete="email" autoFocus />
-		          </FormControl>
-		          <FormControl margin="normal" required fullWidth>
-		            <InputLabel htmlFor="password">Password</InputLabel>
-		            <Input name="password" type="password" id="password" autoComplete="current-password" />
-		          </FormControl>
-		          <Button
-		            type="submit"
-		            fullWidth
-		            variant="contained"
-		            color="secondry"
-		            className={classes.submit}
-		          >
-		            Sign up
-		          </Button>
+		          <Grid
+					  container
+					  direction="row"
+					  justify="space-around"
+					  alignItems="flex-end"
+					>
+						<FormControl margin="normal" required >
+				            <InputLabel htmlFor="firstName">First Name</InputLabel>
+				            <Input id="firstName" name="firstName" autoComplete="text" autoFocus />
+				          </FormControl>
+			            <FormControl margin="normal" required >
+				            <InputLabel htmlFor="lastName">Last Name</InputLabel>
+				            <Input name="lastName" type="text" id="lastName" autoComplete="text" />
+				        </FormControl>
+
+				        <FormControl margin="normal" required >
+				            <InputLabel htmlFor="email">Email</InputLabel>
+				            <Input id="email" name="email" autoComplete="email" autoFocus />
+				          </FormControl>
+			            <FormControl margin="normal" required >
+				            <InputLabel htmlFor="password">Password</InputLabel>
+				            <Input name="password" type="password" id="password" autoComplete="current-password" />
+				        </FormControl>	
+					  </Grid>
+					<Grid
+						container
+						direction="row"
+						justify="flex-end"
+					>
+			          <Button
+			            type="submit"
+			            variant="contained"
+			            color="primary"
+			            className={classes.submit}
+			          >
+			            Sign up
+			          </Button>
+			        </Grid>
 		        </form>
 		      </Paper>
 		    </main>

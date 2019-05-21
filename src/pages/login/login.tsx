@@ -13,8 +13,10 @@ import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Paper from '@material-ui/core/Paper';
 import Typography from '@material-ui/core/Typography';
 import {WithStyles, createStyles, withStyles, MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles'
-
+import Grid from '@material-ui/core/Grid'
 import {Theme} from '@material-ui/core/styles/createMuiTheme'
+
+
 
 
 const styles = (theme:Theme) => createStyles({
@@ -103,15 +105,20 @@ export class LoginForm extends React.Component<Props, State> {
 		            control={<Checkbox value="remember" color="primary" />}
 		            label="Remember me"
 		          />
-		          <Button
-		            type="submit"
-		            fullWidth
-		            variant="contained"
-		            color="primary"
-		            className={classes.submit}
-		          >
-		            Sign in
-		          </Button>
+		          <Grid
+						container
+						direction="row"
+						justify="flex-end"
+					>
+			          <Button
+			            type="submit"
+			            variant="contained"
+			            color="primary"
+			            className={classes.submit}
+			          >
+			            Sign in
+			          </Button>
+			        </Grid>
 		        </form>
 		      </Paper>
 		    </main>
