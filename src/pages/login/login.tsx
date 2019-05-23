@@ -15,8 +15,11 @@ import Typography from '@material-ui/core/Typography';
 import {WithStyles, createStyles, withStyles, MuiThemeProvider, createMuiTheme} from '@material-ui/core/styles'
 import Grid from '@material-ui/core/Grid'
 import {Theme} from '@material-ui/core/styles/createMuiTheme'
+import {styled} from '@material-ui/styles'
 
-
+const MyButton = styled(Button)({
+	background:'#3f51b5',
+});
 
 
 const styles = (theme:Theme) => createStyles({
@@ -110,14 +113,14 @@ export class LoginForm extends React.Component<Props, State> {
 						direction="row"
 						justify="flex-end"
 					>
-			          <Button
+			          <MyButton
 			            type="submit"
 			            variant="contained"
 			            color="primary"
 			            className={classes.submit}
 			          >
 			            Sign in
-			          </Button>
+			          </MyButton>
 			        </Grid>
 		        </form>
 		      </Paper>
