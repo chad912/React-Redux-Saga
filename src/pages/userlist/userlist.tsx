@@ -125,7 +125,7 @@ export class InitialUserList extends React.Component<Props, State> {
 			            color="primary"
 			            className={classes.submit}
 			          >
-			            Sign up
+			            User List
 			          </Button>
 			        </Grid>
 		        </form>
