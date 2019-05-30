@@ -2,8 +2,6 @@
 <h3>Mern Stack-Crud<h3>
 This project is built with lastest version of react.
 
-
-
 	#To run this app:
 	<ul>
 		<li>Clone this repo</li>

@@ -6,7 +6,7 @@ import {BrowserRouter as Router, Route, Link, NavLink, Switch} from 'react-route
 
 import {Header} from './components'
 
-import {Login, Signup, Home} from './pages'
+import {Login, Signup, Home, UserList} from './pages'
 
 export interface Props {
 
@@ -29,6 +29,7 @@ class App extends React.Component<Props, object>{
             <Route exact path="/" component={Home}/>
             <Route path="/login" component={Login}/>
             <Route path="/signup" component={Signup}/>
+            <Route path="/userlist" component={UserList}/>
           </Switch>
 
         </Router>
