@@ -56,12 +56,14 @@ export const UserList = function() {
               const data = [...state.data];
               data.splice(data.indexOf(oldData), 1);
               setState({ ...state, data });
-            }, 600);
+            }, 500);
           })
       }}
     />
   );
 }
+
+
 
 
 
